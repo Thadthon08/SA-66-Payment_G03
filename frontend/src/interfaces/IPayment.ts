@@ -1,9 +1,9 @@
 import { BasketInterface } from "./IBasket";
-import {StatusInterface} from './IStatus'
+import { StatusInterface } from "./IStatus";
 
 export interface PaymentInterface {
   ID?: number;
-  Image: string;
+  Image?: string;
   Date?: Date | null;
 
   BasketID?: number;

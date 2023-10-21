@@ -102,7 +102,7 @@ function Payment_Create() {
       >
         เลือกวันที่โอนเงิน
       </h5>
-      <Form.Item className="datepicker mb-1 text-center" name="Date">
+      <div className="datepicker mb-1 text-center" >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
             label="Date picker"
@@ -112,8 +112,8 @@ function Payment_Create() {
             }}
           />
         </LocalizationProvider>
-      </Form.Item>
-      <Form.Item className="basket-select mb-1 text-center" name="BasketID">
+      </div>
+      <div className="basket-select mb-1 text-center">
         <Select
           placeholder="เลือก BasketID"
           onChange={(value) => setBasketId(value)}
@@ -124,9 +124,9 @@ function Payment_Create() {
             </option>
           ))}
         </Select>
-      </Form.Item>
+      </div>
       <div className="border-b border-base-300 pb-2"></div>
-      <Form.Item name="Image" valuePropName="fileList">
+      <div >
         <h5
           className="text-lg font-bold mb-1"
           style={{ color: "rgb(57, 78, 106)" }}
@@ -145,7 +145,7 @@ function Payment_Create() {
             <div style={{ marginTop: 8 }}>อัพโหลด</div>
           </div>
         </Upload>
-      </Form.Item>
+      </div>
       <button type="submit" className="btn btn-neutral w-full max-w-xs">
         ยืนยันการชำระเงิน
       </button>
